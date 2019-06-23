@@ -2,7 +2,7 @@
 
 This repository is meant to provide a python implementation of a feed forward artificial neural network (ANN) based on a multi-layer perceptron (MLP) model.
 
-**NOTE**: the present guide is not a complete and comprehensive guide to neural network, rather it is intended to build some basic skills and get familiar with the concepts.
+**NOTE**: the present tutorial is not a complete and comprehensive guide to neural network, rather it is intended to build some basic skills and get familiar with the concepts.
 
 ## Model
 
