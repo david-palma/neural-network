@@ -15,7 +15,7 @@ The model adopted in this implementation refers to the multi-layer perceptron mo
 A three-layer neural network corresponds to a function <img src="./eqq/eq01.gif"></img> with <img src="./eqq/eq02.gif"></img> and <img src="./eqq/eq03.gif"></img>.
 
 ### Feed-forward propagation
-At the very beginning, all weights are initially set to a weighted random number from a normal distribution (i.e., <img src="./eqq/eq04.gif"></img>), whilst the biases are set to one.
+At the very beginning, all weights are initially set to a weighted random number from a normal distribution (i.e., <img src="./eqq/eq04.gif"></img>), whilst the biases are set to zero.
 
 Then, it is possible to compute the propagation forward through the network to generate the output value(s).
 
@@ -123,6 +123,7 @@ The truth table of the logical exclusive OR (XOR) shows that it outputs true whe
 
 * input: <img src="./eqq/eq24.gif"></img>
 * training set: <img src="./eqq/eq25.gif"></img>
+* the output consists of 2 classes
 
 The test dataset is a dataset that is independent of the training dataset, but that follows the same probability distribution as the training dataset.
 
@@ -142,6 +143,7 @@ This is another non-linearly separable problem where the dataset consists of fou
 
 * input: <img src="./eqq/eq24.gif"></img>
 * training set: <img src="./eqq/eq25.gif"></img>
+* the output consists of 4 classes
 
 The figure below shows that the loss monotonically decreasing towards a minimum, which is consistent with the gradient descent optimisation algorithm.
 

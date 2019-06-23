@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """NeuralNetwork.py
-The module defines a feed forward artificial neural network based on a
+The module defines a feed-forward artificial neural network based on a
 multi-layer perceptron model. Training through backpropagation algorithm used
 in conjunction with the stochastic gradient descent optimisation method.
 """
@@ -11,10 +11,6 @@ __license__ = "MIT license"
 __version__ = "1.0.0"
 
 import numpy as np
-from sklearn import metrics
-from sklearn import datasets
-import matplotlib.pyplot as plt
-
 
 # Activation function: hyperbolic tangent
 def tanh(x):
@@ -43,13 +39,14 @@ def softmax(x):
 
 class MLP:
     """
-    Feed forward artificial neural network based on MLP model.
+    Artificial neural network based on MLP model.
     """
 
     def __init__(self, layers, activation="hyperbolic tangent"):
         """
         Constructor that sets the activation function, the number of neurons
-        in each layer and initialises their weights randomly, even for biases.
+        in each layer. All weights are initially set to a weighted random
+        number from a normal distribution, whilst the biases are set to zero.
         """
 
         assert (len(layers) == 3), "Number of layers supported is 3."
@@ -73,7 +70,7 @@ class MLP:
         # set output activation
         self.output_activation = softmax
 
-        # initialise parameters randomly
+        # initialise parameters
         np.random.seed(0)
         self.W1 = np.random.randn(layers[0], layers[1]) / np.sqrt(layers[0])
         self.B1 = np.zeros((1, layers[1]))
@@ -85,7 +82,7 @@ class MLP:
     def train(self, X, y, eps=1e-3, reg=1e-3, epochs=20000, stop=1e-5):
         """
         Training the neural network using the stochastic gradient descent
-        method on a given dataset X and output/classes y.
+        method on a given dataset X and output y.
         """
 
         assert (eps > 0
@@ -183,36 +180,3 @@ class MLP:
         probs = self.output_activation(Z2)
 
         return np.argmax(probs, axis=1)
-
-    def details(self):
-        """
-        Function that prints info about the neural network.
-        """
-
-        print("Parameters of the multi-layer perceptron")
-        print("- Depth:          %d" % self.num_layers)
-        print("- Inputs:         %d" % self.num_inputs)
-        print("- Hidden neurons: %d" % self.num_hiddens)
-        print("- Output neurons: %d" % self.num_outputs)
-        print("- Activation function: %s" % self.n_activation)
-        print("- Output activation:   %s\n" % self.n_output)
-
-        return None
-
-if __name__ == "__main__":
-    N = 100  # number of points per class
-    D = 2    # dimensionality
-    K = 4    # number of classes
-
-    nn = MLP([D, 15, K])
-    nn.details()
-
-    # Generate a dataset
-    np.random.seed(0)
-    X = np.zeros((N * K, D))
-    y = np.zeros(N * K, dtype='uint8')
-
-
-    print("\nTraining the neural network...")
-    nn.train(X, y)
-    y_pred = nn.predict(X)
