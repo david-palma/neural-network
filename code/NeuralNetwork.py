@@ -6,7 +6,6 @@ in conjunction with the stochastic gradient descent optimisation method.
 """
 
 __author__  = "David Palma"
-__contact__ = "palma.david@spes.uniud.it"
 __license__ = "MIT license"
 __version__ = "1.0.0"
 
