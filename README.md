@@ -135,7 +135,7 @@ Let's look at the final prediction (output) using the implemented Artificial Neu
 
 <p align="center"><img src="./figures/xor_output.gif" width="700px"></img><p>
 
-As you can see, the neural network was able to find a decision boundary that successfully separates the classes.
+As you can see, the neural network has been able to find a decision boundary that successfully separates the classes.
 
 ### Test #2: multiple classes prediction
 
@@ -153,7 +153,7 @@ Let's look at the final prediction (output) using the implemented Artificial Neu
 
 <p align="center"><img src="./figures/moon_output.gif" width="700px"></img><p>
 
-As you can see, the neural network was able to find a decision boundary that successfully separates the classes.
+As you can see, the neural network has been able to find a decision boundary that successfully separates the classes.
 
 ## License
 
