@@ -10,39 +10,39 @@ ANN is a collection of interconnected neurons that incrementally learn from thei
 
 The model adopted in this implementation refers to the multi-layer perceptron model (three-layer neural network), which is represented in the following figure.
 
-<p align="center"><img src="./mlp.png" width="700px"></img><p>
+<p align="center"><img src="./figures/mlp.png" width="700px"></img><p>
 
-A three-layer neural network corresponds to a function <img src="./eqq/eq01.gif"></img> with <img src="./eqq/eq02.gif"></img> and <img src="./eqq/eq03.gif"></img>.
+A three-layer neural network corresponds to a function <img src="./figures/eq01.gif"></img> with <img src="./figures/eq02.gif"></img> and <img src="./figures/eq03.gif"></img>.
 
 ### Feed-forward propagation
-At the very beginning, all weights are initially set to a weighted random number from a normal distribution (i.e., <img src="./eqq/eq04.gif"></img>), whilst the biases are set to zero.
+At the very beginning, all weights are initially set to a weighted random number from a normal distribution (i.e., <img src="./figures/eq04.gif"></img>), whilst the biases are set to zero.
 
 Then, it is possible to compute the propagation forward through the network to generate the output value(s).
 
 The hidden node values are given by:
 
-<p align="center"><img src="./eqq/eq05.gif"></img><p>
+<p align="center"><img src="./figures/eq05.gif"></img><p>
 
 Then, using this result it is possible to compute the output node values:
 
-<p align="center"><img src="./eqq/eq06.gif"></img><p>
+<p align="center"><img src="./figures/eq06.gif"></img><p>
 
 However, it is also possible to use a matrix notation:
 
-<p align="center"><img src="./eqq/eq07.gif"></img><p>
+<p align="center"><img src="./figures/eq07.gif"></img><p>
 
 where:
-* <img src="./eqq/eq08.gif"></img> are the bias vectors;
-* <img src="./eqq/eq09.gif"></img> are the weight matrices;
-* <img src="./eqq/eq10.gif"></img> are the activation functions.
+* <img src="./figures/eq08.gif"></img> are the bias vectors;
+* <img src="./figures/eq09.gif"></img> are the weight matrices;
+* <img src="./figures/eq10.gif"></img> are the activation functions.
 
 ### Activation function
 
 For the activation function it has been used the hyperbolic tangent, but you can choose the sigmoid function as well.
 
-<p align="center"><img src="./eqq/eq11.gif"></img></p>
+<p align="center"><img src="./figures/eq11.gif"></img></p>
 
-<p align="center"><img src="./eqq/eq12-plot.gif"></img></p>
+<p align="center"><img src="./figures/tanh.gif"></img></p>
 
 ### Classification
 
@@ -50,13 +50,13 @@ Classification is done by projecting an input vector onto a set of hyperplanes, 
 
 The distance from the input to a hyperplane reflects the probability that the input is a member of the corresponding class.
 
-The probability that an input vector <img src="./eqq/eq13.gif"></img> is a member of a class <img src="./eqq/eq14.gif"></img> is:
+The probability that an input vector <img src="./figures/eq12.gif"></img> is a member of a class <img src="./figures/eq13.gif"></img> is:
 
-<p align="center"><img src="./eqq/eq15.gif"></img></p>
+<p align="center"><img src="./figures/eq14.gif"></img></p>
 
-The model's prediction <img src="./eqq/eq16.gif"></img> is the class whose probability is maximal:
+The model's prediction <img src="./figures/eq15.gif"></img> is the class whose probability is maximal:
 
-<p align="center"><img src="./eqq/eq17.gif"></img></p>
+<p align="center"><img src="./figures/eq16.gif"></img></p>
 
 ### Training and backpropagation
 
@@ -64,13 +64,13 @@ The training of the network takes place through the backpropagation algorithm us
 
 The total error (loss function) is given by the sum of squared errors of prediction, which is the  sum of the squares of residuals (deviations predicted from actual empirical values of data):
 
-<p align="center"><img src="./eqq/eq18.gif"></img></p>
+<p align="center"><img src="./figures/eq17.gif"></img></p>
 
 The goal in this step is to find the gradient of each weight with respect to the output:
 
-<p align="center"><img src="./eqq/eq19.gif"></img></p>
+<p align="center"><img src="./figures/eq18.gif"></img></p>
 
-where <img src="./eqq/eq20.gif"></img> is the learning rate, which should be tuned to ensure a fast convergence of the weights to a response, without oscillations.
+where <img src="./figures/eq19.gif"></img> is the learning rate, which should be tuned to ensure a fast convergence of the weights to a response, without oscillations.
 
 
 Now it is possible to apply the chain rule to back propagate the error in order to update the weight matrix and bias vector (the math part is not reported here).
@@ -114,44 +114,44 @@ This is a classical non–linearly separable problem for logical XOR with noisy 
 
 The truth table of the logical exclusive OR (XOR) shows that it outputs true whenever the inputs differ:
 
-| <img src="./eqq/eq21.gif"></img> | <img src="./eqq/eq22.gif"></img> | <img src="./eqq/eq23.gif"></img> |
+| <img src="./figures/eq20.gif"></img> | <img src="./figures/eq21.gif"></img> | <img src="./figures/eq22.gif"></img> |
 |:-:|:-:|:-:|
 | 0 | 0 | 0 |
 | 0 | 1 | 1 |
 | 1 | 0 | 1 |
 | 1 | 1 | 0 |
 
-* input: <img src="./eqq/eq24.gif"></img>
-* training set: <img src="./eqq/eq25.gif"></img>
+* input: <img src="./figures/eq23.gif"></img>
+* training set: <img src="./figures/eq24.gif"></img>
 * the output consists of 2 classes
 
 The test dataset is a dataset that is independent of the training dataset, but that follows the same probability distribution as the training dataset.
 
 The model is initially fit on the training dataset, so we can take a look at the loss per epoch graph. The figure below shows that the loss monotonically decreasing towards a minimum, which is consistent with the gradient descent optimisation algorithm.
 
-<p align="center"><img src="./eqq/xor_cost.gif" width="700px"></img><p>
+<p align="center"><img src="./figures/xor_cost.gif" width="700px"></img><p>
 
-Let's look at the final prediction (output) using the implemented Artificial Neural Network with 7 neurons in hidden layer <img src="./eqq/eq26.gif"></img>.
+Let's look at the final prediction (output) using the implemented Artificial Neural Network with 7 neurons in hidden layer <img src="./figures/eq26.gif"></img>.
 
-<p align="center"><img src="./eqq/xor_output.gif" width="700px"></img><p>
+<p align="center"><img src="./figures/xor_output.gif" width="700px"></img><p>
 
 As you can see, the neural networks was able to find a decision boundary that successfully separates the classes.
 
 ### Test #2: multiple classes prediction
 
-This is another non-linearly separable problem where the dataset consists of four (noisy) spirals rotated by a fixed angle <img src="./eqq/eq27.gif"></img> between them.
+This is another non-linearly separable problem where the dataset consists of four (noisy) spirals rotated by a fixed angle <img src="./figures/eq26.gif"></img> between them.
 
-* input: <img src="./eqq/eq24.gif"></img>
-* training set: <img src="./eqq/eq25.gif"></img>
+* input: <img src="./figures/eq23.gif"></img>
+* training set: <img src="./figures/eq24.gif"></img>
 * the output consists of 4 classes
 
 The figure below shows that the loss monotonically decreasing towards a minimum, which is consistent with the gradient descent optimisation algorithm.
 
-<p align="center"><img src="./eqq/moon_cost.gif" width="700px"></img><p>
+<p align="center"><img src="./figures/moon_cost.gif" width="700px"></img><p>
 
-Let's look at the final prediction (output) using the implemented Artificial Neural Network with 15 neurons in hidden layer <img src="./eqq/eq26.gif"></img>.
+Let's look at the final prediction (output) using the implemented Artificial Neural Network with 15 neurons in hidden layer <img src="./figures/eq26.gif"></img>.
 
-<p align="center"><img src="./eqq/moon_output.gif" width="700px"></img><p>
+<p align="center"><img src="./figures/moon_output.gif" width="700px"></img><p>
 
 As you can see, the neural networks was able to find a decision boundary that successfully separates the classes.
 
