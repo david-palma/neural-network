@@ -1,6 +1,6 @@
 # Implementation of a neural network from scratch in Python
 
-This repository is meant to provide a python implementation of a feed forward artificial neural network (ANN) based on a multi-layer perceptron (MLP) model.
+This repository contains a python implementation of a feed forward artificial neural network (ANN) based on multi-layer perceptron (MLP) model.
 
 **NOTE**: the present tutorial is not a complete and comprehensive guide to neural network, rather it is intended to build some basic skills and get familiar with the concepts.
 
@@ -8,7 +8,7 @@ This repository is meant to provide a python implementation of a feed forward ar
 
 ANN is a collection of interconnected neurons that incrementally learn from their environment (data) to capture essential linear and nonlinear trends in complex data, so that it provides reliable predictions for new situations containing even partial and noisy information.
 
-The model adopted in this implementation refers to the multi-layer perceptron model (three-layer neural network), which is represented in the following figure.
+The model adopted in this implementation refers to the multi-layer perceptron model with a single hidden layer (three-layer neural network), which is represented in the following figure.
 
 <p align="center"><img src="./figures/mlp.png" width="700px"></img><p>
 
