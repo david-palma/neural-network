@@ -10,9 +10,9 @@ ANN is a collection of interconnected neurons that incrementally learn from thei
 
 The model adopted in this implementation refers to the multi-layer perceptron model with a single hidden layer (three-layer neural network), which is represented in the following figure.
 
-<p align="center"><img src="./figures/mlp.png" width="700px"></img><p>
+<p align="center"><img src="./figures/mlp.png" width="700px;"></img><p>
 
-A three-layer neural network corresponds to a function <img src="./figures/eq01.gif"></img> with <img src="./figures/eq02.gif"></img> and <img src="./figures/eq03.gif"></img>.
+A three-layer neural network corresponds to a function ![](./figures/eq01.gif) <img src="./figures/eq01.gif"></img> with <img src="./figures/eq02.gif"></img> and <img src="./figures/eq03.gif"></img>.
 
 ### Feed-forward propagation
 At the very beginning, all weights are initially set to a weighted random number from a normal distribution (i.e., <img src="./figures/eq04.gif"></img>), whilst the biases are set to zero.
@@ -129,11 +129,11 @@ The test dataset is a dataset that is independent of the training dataset, but t
 
 The model is initially fit on the training dataset, so we can take a look at the loss per epoch graph. The figure below shows that the loss monotonically decreasing towards a minimum, which is consistent with the gradient descent optimisation algorithm.
 
-<p align="center"><img src="./figures/xor_cost.gif" width="700px"></img><p>
+<p align="center"><img src="./figures/xor_cost.gif" width="700px;"></img><p>
 
 Let's look at the final prediction (output) using the implemented Artificial Neural Network with 7 neurons in hidden layer <img src="./figures/eq26.gif"></img>.
 
-<p align="center"><img src="./figures/xor_output.gif" width="700px"></img><p>
+<p align="center"><img src="./figures/xor_output.gif" width="700px;"></img><p>
 
 As you can see, the neural network has been able to find a decision boundary that successfully separates the classes.
 
@@ -147,11 +147,11 @@ This is another non-linearly separable problem where the dataset consists of fou
 
 The figure below shows that the loss monotonically decreasing towards a minimum, which is consistent with the gradient descent optimisation algorithm.
 
-<p align="center"><img src="./figures/moon_cost.gif" width="700px"></img><p>
+<p align="center"><img src="./figures/moon_cost.gif" width="700px;"></img><p>
 
 Let's look at the final prediction (output) using the implemented Artificial Neural Network with 15 neurons in hidden layer <img src="./figures/eq26.gif"></img>.
 
-<p align="center"><img src="./figures/moon_output.gif" width="700px"></img><p>
+<p align="center"><img src="./figures/moon_output.gif" width="700px;"></img><p>
 
 As you can see, the neural network has been able to find a decision boundary that successfully separates the classes.
 
