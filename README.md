@@ -12,7 +12,7 @@ The model adopted in this implementation refers to the multi-layer perceptron mo
 
 <p align="center"><img src="./figures/mlp.png" width="700px"></img><p>
 
-A three-layer neural network corresponds to a function <img src="https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cfn_cm%20f%20%3A%20%5Cmathbb%7BR%7D%5EN%20%5Crightarrow%20%5Cmathbb%7BR%7D%5EM"></img> with <img src="./figures/eq02.gif"></img> and <img src="./figures/eq03.gif"></img>.
+A three-layer neural network corresponds to a function <img src="./figures/eq01.gif"></img> with <img src="./figures/eq02.gif"></img> and <img src="./figures/eq03.gif"></img>.
 
 ### Feed-forward propagation
 At the very beginning, all weights are initially set to a weighted random number from a normal distribution (i.e., <img src="./figures/eq04.gif"></img>), whilst the biases are set to zero.
