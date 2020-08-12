@@ -12,29 +12,49 @@ The model adopted in this implementation refers to the multi-layer perceptron mo
 
 <p align="center"><img src="./figures/mlp.png" width="700px"></img><p>
 
-A three-layer neural network corresponds to a function <img src="./figures/eq01.gif"></img> with <img src="./figures/eq02.gif"></img> and <img src="./figures/eq03.gif"></img>.
+A three-layer neural network corresponds to a function <!-- $f: \mathbb{R}^N \to \mathbb{R}^M$ --> <img style="transform: translateY(0.25em);" src="svg\xxqYDzOvRn.svg"/> with <!-- $x \in \mathbb{R}^N$ --> <img style="transform: translateY(0.25em);" src="svg\Cl6d7WLCGv.svg"/> and <!-- $y \in \mathbb{R}^M$ --> <img style="transform: translateY(0.25em);" src="svg\L7kZwgStzO.svg"/>.
 
 ### Feed-forward propagation
-At the very beginning, all weights are initially set to a weighted random number from a normal distribution (i.e., <img src="./figures/eq04.gif"></img>), whilst the biases are set to zero.
+At the very beginning, all weights are initially set to a weighted random number from a normal distribution (i.e., <!-- $\sim N(0,1)$ --> <img style="transform: translateY(0.25em);" src="svg\Qk55eCTqak.svg"/>), whilst the biases are set to zero.
 
 Then, it is possible to compute the propagation forward through the network to generate the output value(s).
 
 The hidden node values are given by:
 
-<p align="center"><img src="./figures/eq05.gif"></img><p>
+<!-- $$
+\begin{aligned}
+a_1 &= s \left(b_1^{(1)} + w_{11}^{(1)}x_1 + w_{12}^{(1)}x_2 \ldots w_{1n}^{(1)}x_n\right) \\
+a_2 &= s \left(b_2^{(1)} + w_{21}^{(1)}x_1 + w_{22}^{(1)}x_2 \ldots w_{2n}^{(1)}x_n\right) \\
+& \ \; \vdots \\
+a_h &= s \left(b_h^{(1)} + w_{h1}^{(1)}x_1 + w_{h2}^{(1)}x_2 \ldots w_{hn}^{(1)}x_n\right)
+\end{aligned}
+$$ -->
+
+<div align="center"><img src="svg\PBUZSRwuNb.svg"/></div>
 
 Then, using this result it is possible to compute the output node values:
 
-<p align="center"><img src="./figures/eq06.gif"></img><p>
+<!-- $$
+\begin{aligned}
+y_1 &= G \left(b_1^{(2)} + w_{11}^{(2)}a_1 + w_{12}^{(2)}a_2 \ldots w_{1h}^{(2)}a_h\right) \\
+y_2 &= G \left(b_2^{(2)} + w_{21}^{(2)}a_1 + w_{22}^{(2)}a_2 \ldots w_{2h}^{(2)}a_h\right) \\
+& \ \; \vdots \\
+y_m &= G \left(b_m^{(2)} + w_{m1}^{(2)}a_1 + w_{m2}^{(2)}a_2 \ldots w_{mh}^{(2)}a_h\right)
+\end{aligned}
+$$ -->
+
+<div align="center"><img src="svg\tC06uM4cxG.svg"/></div>
 
 However, it is also possible to use a matrix notation:
 
-<p align="center"><img src="./figures/eq07.gif"></img><p>
+<!-- $$f(x) = G \left(b^{(2)} + W^{(2)} \left(s \left(b^{(1)} + W^{(1)}x\right)\right)\right)$$ -->
+
+<div align="center"><img src="svg\YogX5yZw4V.svg"/></div>
 
 where:
-* <img src="./figures/eq08.gif"></img> are the bias vectors;
-* <img src="./figures/eq09.gif"></img> are the weight matrices;
-* <img src="./figures/eq10.gif"></img> are the activation functions.
+* <!-- $b^{(1)} \in \mathbb{R}^H,\; b^{(2)} \in \mathbb{R}^M$ --> <img style="transform: translateY(0.25em);" src="svg\18HRTWvBrn.svg"/> are the bias vectors;
+* <!-- $W^{(1)} \in \mathbb{R}^{N\times H},\; W^{(2)} \in \mathbb{R}^{H\times M}$ --> <img style="transform: translateY(0.25em);" src="svg\MDd3BBo683.svg"/> are the weight matrices;
+* <!-- $G,\; s$ --> <img style="transform: translateY(0.25em);" src="svg\i6SzNXG8fr.svg"/> are the activation functions.
 
 ### Activation function
 
