@@ -35,17 +35,14 @@ $$ -->
 
 Then, using this result it is possible to compute the output node values:
 
-<!-- $$
-\small
+$$
 \begin{aligned}
 y_1 &= G \left(b_1^{(2)} + w_{11}^{(2)}a_1 + w_{12}^{(2)}a_2 \ldots w_{1h}^{(2)}a_h\right) \\
 y_2 &= G \left(b_2^{(2)} + w_{21}^{(2)}a_1 + w_{22}^{(2)}a_2 \ldots w_{2h}^{(2)}a_h\right) \\
 & \ \; \vdots \\
 y_m &= G \left(b_m^{(2)} + w_{m1}^{(2)}a_1 + w_{m2}^{(2)}a_2 \ldots w_{mh}^{(2)}a_h\right)
 \end{aligned}
-$$ -->
-
-<div align="center"><img src="svg\vahJz1uIsH.svg"/></div>
+$$
 
 However, it is also possible to use a matrix notation:
 
