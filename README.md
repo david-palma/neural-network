@@ -12,10 +12,10 @@ The model adopted in this implementation refers to the multi-layer perceptron mo
 
 <p align="center"><img src="./figures/mlp.png" width="700px"></img><p>
 
-A three-layer neural network corresponds to a function <!-- $f: \mathbb{R}^N \to \mathbb{R}^M$ --> <img src="svg\eq1.svg"/> with <!-- $x \in \mathbb{R}^N$ --> <img src="svg\eq2.svg"> and <!-- $y \in \mathbb{R}^M$ --> <img src="svg\eq3.svg">.
+A three-layer neural network corresponds to a function <!-- $f: \mathbb{R}^N \to \mathbb{R}^M$ --> <img style="transform: translateY(0.25em);" src="svg\eq1.svg"/> with <!-- $x \in \mathbb{R}^N$ --> <img style="transform: translateY(0.25em);" src="svg\eq2.svg"> and <!-- $y \in \mathbb{R}^M$ --> <img style="transform: translateY(0.25em);" src="svg\eq3.svg">.
 
 ### Feed-forward propagation
-At the very beginning, all weights are initially set to a weighted random number from a normal distribution (i.e., <!-- $\sim N(0,1)$ --> <img src="svg\eq4.svg"/>), whilst the biases are set to zero.
+At the very beginning, all weights are initially set to a weighted random number from a normal distribution (i.e., <!-- $\sim N(0,1)$ --> <img style="transform: translateY(0.25em);" src="svg\eq4.svg"/>), whilst the biases are set to zero.
 
 Then, it is possible to compute the propagation forward through the network to generate the output value(s).
 
@@ -54,9 +54,9 @@ $$ -->
 <div align="center"><img src="svg\eq7.svg"/></div>
 
 where:
-* <!-- $b^{(1)} \in \mathbb{R}^H,\; b^{(2)} \in \mathbb{R}^M$ --> <img src="svg\eq8.svg"/> are the bias vectors;
-* <!-- $W^{(1)} \in \mathbb{R}^{N\times H},\; W^{(2)} \in \mathbb{R}^{H\times M}$ --> <img src="svg\eq9.svg"/> are the weight matrices;
-* <!-- $G,\; s$ --> <img src="svg\eq10.svg"/> are the activation functions.
+* <!-- $b^{(1)} \in \mathbb{R}^H,\; b^{(2)} \in \mathbb{R}^M$ --> <img style="transform: translateY(0.25em);" src="svg\eq8.svg"/> are the bias vectors;
+* <!-- $W^{(1)} \in \mathbb{R}^{N\times H},\; W^{(2)} \in \mathbb{R}^{H\times M}$ --> <img style="transform: translateY(0.25em);" src="svg\eq9.svg"/> are the weight matrices;
+* <!-- $G,\; s$ --> <img style="transform: translateY(0.25em);" src="svg\eq10.svg"/> are the activation functions.
 
 ### Activation function
 
@@ -76,7 +76,7 @@ Classification is done by projecting an input vector onto a set of hyperplanes, 
 
 The distance from the input to a hyperplane reflects the probability that the input is a member of the corresponding class.
 
-The probability that an input vector <!-- $x$ --> <img src="svg\eq12.svg"> is a member of a class <!-- $i$ --> <img src="svg\eq13.svg"> is:
+The probability that an input vector <!-- $x$ --> <img style="transform: translateY(0.25em);" src="svg\eq12.svg"> is a member of a class <!-- $i$ --> <img style="transform: translateY(0.25em);" src="svg\eq13.svg"> is:
 
 <!-- $$
 P\left(y=i|x,W,b\right)=\text{softmax}_i\left(Wx+b\right)=\dfrac{e^{W_ix+b_i}}{\sum_je^{W_jx+b_j}}
@@ -84,7 +84,7 @@ $$ -->
 
 <div align="center"><img src="svg\eq14.svg"/></div>
 
-The model's prediction <!-- $\hat{y}$ --> <img src="svg\eq10.svg"/> is the class whose probability is maximal:
+The model's prediction <!-- $\hat{y}$ --> <img style="transform: translateY(0.25em);" src="svg\eq10.svg"/> is the class whose probability is maximal:
 
 <!-- $$
 \hat{y} = \argmax_i\left(P\left(y=i|x,W,b\right)\right)
@@ -112,7 +112,7 @@ $$ -->
 
 <div align="center"><img src="svg\eq18.svg"/></div>
 
-where <!-- $\eta$ --> <img src="svg\eq19.svg"/> is the learning rate, which should be tuned to ensure a fast convergence of the weights to a response, without oscillations.
+where <!-- $\eta$ --> <img style="transform: translateY(0.25em);" src="svg\eq19.svg"/> is the learning rate, which should be tuned to ensure a fast convergence of the weights to a response, without oscillations.
 
 Now it is possible to apply the chain rule to back propagate the error in order to update the weight matrix and bias vector (the math part is not reported here).
 
@@ -162,8 +162,8 @@ The truth table of the logical exclusive OR (XOR) shows that it outputs true whe
 |       1       |       0       | 1 |
 |       1       |       1       | 0 |
 
-* input: <!-- $X = x \pm\epsilon,\ X\in \mathbb{R}^{N\times 2}$ --> <img src="svg\eq20.svg"/>
-* training set: <!-- $X_T \subset X$ --> <img src="svg\eq21.svg"/>
+* input: <!-- $X = x \pm\epsilon,\ X\in \mathbb{R}^{N\times 2}$ --> <img style="transform: translateY(0.25em);" src="svg\eq20.svg"/>
+* training set: <!-- $X_T \subset X$ --> <img style="transform: translateY(0.25em);" src="svg\eq21.svg"/>
 * the output consists of 2 classes
 
 The test dataset is a dataset that is independent of the training dataset, but that follows the same probability distribution as the training dataset.
@@ -172,7 +172,7 @@ The model is initially fit on the training dataset, so we can take a look at the
 
 <p align="center"><img src="./figures/xor_cost.gif" width="700px"></img><p>
 
-Let's look at the final prediction (output) using the implemented Artificial Neural Network with 7 neurons in hidden layer <!-- $\theta$ --> <img src="svg\eq22.svg"/>.
+Let's look at the final prediction (output) using the implemented Artificial Neural Network with 7 neurons in hidden layer <!-- $\theta$ --> <img style="transform: translateY(0.25em);" src="svg\eq22.svg"/>.
 
 <p align="center"><img src="./figures/xor_output.gif" width="700px"></img><p>
 
@@ -180,17 +180,17 @@ As you can see, the neural network has been able to find a decision boundary tha
 
 ### Test #2: multiple classes prediction
 
-This is another non-linearly separable problem where the dataset consists of four (noisy) spirals rotated by a fixed angle <img src="svg\eq22.svg"/> between them.
+This is another non-linearly separable problem where the dataset consists of four (noisy) spirals rotated by a fixed angle <img style="transform: translateY(0.25em);" src="svg\eq22.svg"/> between them.
 
-* input: <img src="svg\eq20.svg"/>
-* training set: <img src="svg\eq21.svg"/>
+* input: <img style="transform: translateY(0.25em);" src="svg\eq20.svg"/>
+* training set: <img style="transform: translateY(0.25em);" src="svg\eq21.svg"/>
 * the output consists of 4 classes
 
 The figure below shows that the loss monotonically decreasing towards a minimum, which is consistent with the gradient descent optimisation algorithm.
 
 <p align="center"><img src="./figures/moon_cost.gif" width="700px"></img><p>
 
-Let's look at the final prediction (output) using the implemented Artificial Neural Network with 15 neurons in hidden layer <img src="svg\eq22.svg"/>.
+Let's look at the final prediction (output) using the implemented Artificial Neural Network with 15 neurons in hidden layer <img style="transform: translateY(0.25em);" src="svg\eq22.svg"/>.
 
 <p align="center"><img src="./figures/moon_output.gif" width="700px"></img><p>
 
