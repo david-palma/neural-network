@@ -15,7 +15,7 @@ The model adopted in this implementation refers to the multi-layer perceptron mo
 A three-layer neural network corresponds to a function <!-- $f: \mathbb{R}^N \to \mathbb{R}^M$ --> <img style="transform: translateY(0.25em);" src="svg\eq1.svg"/> with <!-- $x \in \mathbb{R}^N$ --> <img style="transform: translateY(0.25em);" src="svg\eq2.svg"> and <!-- $y \in \mathbb{R}^M$ --> <img style="transform: translateY(0.25em);" src="svg\eq3.svg">.
 
 ### Feed-forward propagation
-At the very beginning, all weights are initially set to a weighted random number from a normal distribution (i.e., <!-- $\sim N(0,1)$ --> <img style="transform: translateY(0.25em);" src="svg\eq4.svg"/>), whilst the biases are set to zero.
+At the very beginning, all weights are initially set to a weighted random number from a normal distribution (i.e., <!-- $\sim N(0,1)$ --> <img style="transform: translateY(0.5em);" src="svg\eq4.svg"/>), whilst the biases are set to zero.
 
 Then, it is possible to compute the propagation forward through the network to generate the output value(s).
 
