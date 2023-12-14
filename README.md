@@ -52,7 +52,7 @@ For the activation function it has been used the hyperbolic tangent, but you can
 
 $$s(x) = \tanh(x) = \dfrac{e^x-e^{-x}}{e^x+e^{-x}} \qquad \rightarrow \qquad \dfrac{ds(x)}{dx} = s(x)\left(1-s(x)\right)$$
 
-<p align="center"><img src="./figures/tanh.gif"></img></p>
+<p align="center"><img src="./figures/tanh.png"></img></p>
 
 ### Classification
 
@@ -138,11 +138,11 @@ The test dataset is a dataset that is independent of the training dataset, but t
 
 The model is initially fit on the training dataset, so we can take a look at the loss per epoch graph. The figure below shows that the loss monotonically decreasing towards a minimum, which is consistent with the gradient descent optimisation algorithm.
 
-<p align="center"><img src="./figures/xor_cost.gif" width="700px"></img><p>
+<p align="center"><img src="./figures/xor_cost.png" width="700px"></img><p>
 
 Let's look at the final prediction (output) using the implemented Artificial Neural Network with 7 neurons in hidden layer $\theta$.
 
-<p align="center"><img src="./figures/xor_output.gif" width="700px"></img><p>
+<p align="center"><img src="./figures/xor_output.png" width="700px"></img><p>
 
 As you can see, the neural network has been able to find a decision boundary that successfully separates the classes.
 
@@ -156,11 +156,11 @@ This is another non-linearly separable problem where the dataset consists of fou
 
 The figure below shows that the loss monotonically decreasing towards a minimum, which is consistent with the gradient descent optimisation algorithm.
 
-<p align="center"><img src="./figures/moon_cost.gif" width="700px"></img><p>
+<p align="center"><img src="./figures/moon_cost.png" width="700px"></img><p>
 
 Let's look at the final prediction (output) using the implemented Artificial Neural Network with 15 neurons in hidden layer $\theta$.
 
-<p align="center"><img src="./figures/moon_output.gif" width="700px"></img><p>
+<p align="center"><img src="./figures/moon_output.png" width="700px"></img><p>
 
 As you can see, the neural network has been able to find a decision boundary that successfully separates the classes.
 
